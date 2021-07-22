@@ -43,6 +43,7 @@ AFRAME.registerComponent('wallet', {
       const address = await wallet.getPKH();
       console.log(wallet);
       console.log(address);
+      if (wallet && address) { this.setAttribute('color', '#00ff00'); } else { this.setAttribute('color', '#ff0000'); }
     });
   }
 });
