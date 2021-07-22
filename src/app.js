@@ -18,6 +18,8 @@ export class App {
     return this.wallet;
   }
 
+  // TODO disonnectWallet
+
   async getBalance (address = this.address) {
     const rawBalance = await this.tk.tz.getBalance(address);
     const balance = rawBalance.toNumber() / 1000000;
