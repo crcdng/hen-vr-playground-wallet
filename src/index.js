@@ -34,16 +34,30 @@ AFRAME.registerComponent('henlink', {
 AFRAME.registerComponent('wallet', {
   schema: {},
   init: function () {
+    this.connected = false;
     console.log('registering component wallet');
   },
   update: function () {
-    this.el.addEventListener('click', async function (evt) {
+    this.el.addEventListener('click', async (evt) => {
       console.log('click on component wallet');
-      const wallet = await app.connectWallet();
-      const address = await wallet.getPKH();
-      console.log(wallet);
-      console.log(address);
-      if (wallet && address) { this.setAttribute('color', '#00ff00'); } else { this.setAttribute('color', '#BBBBBB'); }
+      console.log(this.connected);
+      if (this.connected === false) { // connect
+        const wallet = await app.connectWallet();
+        const address = await wallet.getPKH();
+        console.log(wallet);
+        console.log(address);
+        if (wallet && address) {
+          this.el.setAttribute('color', '#00ff00');
+          this.connected = true;
+        } else {
+          this.el.setAttribute('color', '#BBBBBB');
+        }
+      } else { // disconnect
+        console.log('disconnecting');
+        await app.disconnectWallet();
+        this.el.setAttribute('color', '#FFC65D');
+        this.connected = false;
+      }
     });
   }
 });

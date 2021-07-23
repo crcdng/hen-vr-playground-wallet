@@ -1,9 +1,9 @@
 import { BeaconWallet } from '@taquito/beacon-wallet';
 
 const options = {
-  name: 'MyAwesomeDapp',
+  name: 'H=NVRExperiment',
   iconUrl: 'https://tezostaquito.io/img/favicon.png',
-  preferredNetwork: 'florencenet',
+  preferredNetwork: 'mainnet',
   eventHandlers: {
     PERMISSION_REQUEST_SUCCESS: {
       handler: async (data) => {

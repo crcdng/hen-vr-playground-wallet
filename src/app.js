@@ -18,7 +18,13 @@ export class App {
     return this.wallet;
   }
 
-  // TODO disonnectWallet
+  async disconnectWallet () {
+    console.log(this.wallet);
+    // not implemented in @taquito/beacon-wallet": "^6.4.0-ledger.0"
+    // await this.wallet.clearActiveAccount();
+    await this.wallet.client.setActiveAccount();
+    this.address = null;
+  }
 
   async getBalance (address = this.address) {
     const rawBalance = await this.tk.tz.getBalance(address);

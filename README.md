@@ -4,8 +4,9 @@
 
 ![](docs/screen.png)
 
-Click on the yellow cylinder and it will connect to your wallet. The cylinder will go green if the operation succeeds, and grey otherwise.
+Click on the yellow cylinder and it will connect to your Beacon-connected wallet. The cylinder will go green if the operation succeeds, and grey otherwise.
 Then click on the rabbit and it will tell your balance.  
+Click on the yellow cylinder again to disconnect your wallet.
 
 Click on the manifesto and it will open it's OBJKT page from where you can collect it (this operation is not implemented yet and connects to your wallet via H=N).    
 
@@ -21,7 +22,8 @@ To start, run: `npm run watch`, then open http://localhost:1234 in the browser.
 
 ## Read this:
 
-This demo runs on mainnet. 
+This demo runs on mainnet (mainly because H=N itself runs on mainnet only: https://github.com/hicetnunc2000/hicetnunc-api/issues/52). 
+
 This is experimental code, do not use it for anything serious. 
 
 Please make sure you are informed about the conditions of the MIT license for using this code, which excludes warranty of any kind. 
