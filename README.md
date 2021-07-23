@@ -1,11 +1,11 @@
 # H=N VR Experiments Playground 
 
-## Iteration 2: Display your wallet balance in VR
+## Iteration 2: Connect to your wallet in VR
 
 ![](docs/screen.png)
 
-Click on the yellow cylinder and it will connect to your wallet.
-Click on the rabbit and it will tell your balance.  
+Click on the yellow cylinder and it will connect to your wallet. The cylinder will go green if the operation succeeds, and grey otherwise.
+Then click on the rabbit and it will tell your balance.  
 
 Click on the manifesto and it will open it's OBJKT page from where you can collect it (this operation is not implemented yet and connects to your wallet via H=N).    
 
