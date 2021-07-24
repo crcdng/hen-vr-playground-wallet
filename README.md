@@ -4,9 +4,7 @@
 
 ![](docs/screen.png)
 
-Click on the yellow cylinder and it will connect to your Beacon-connected wallet. The cylinder will go green if the operation succeeds, and grey otherwise.
-Then click on the rabbit and it will tell your balance.  
-Click on the yellow cylinder again to disconnect your wallet.
+Click on the yellow cylinder and it will connect to your Beacon-connected wallet. The cylinder will go green if the operation succeeds, and grey otherwise. Then click on the rabbit and it will tell your balance. Click on the cylinder again to disconnect your wallet.
 
 Click on the manifesto and it will open it's OBJKT page from where you can collect it (this operation is not implemented yet and connects to your wallet via H=N).    
 
@@ -28,7 +26,7 @@ This is experimental code, do not use it for anything serious.
 
 Please make sure you are informed about the conditions of the MIT license for using this code, which excludes warranty of any kind. 
 
-DO NOT upgrade Taquito or the code will break. The Beacon Wallet code is a mess 
+DO NOT upgrade Taquito or the code will break. The Beacon Wallet SDK code is a mess 
 https://github.com/ecadlabs/taquito/issues/882, https://github.com/airgap-it/beacon-sdk/issues/138 therefore currently it requires downgrading the `taquito` / `beacon-wallet` packages. 
 
 DO NOT upgrade the (deprecated) parcel bundler, newer versions have problems with static files such as 3d model formats. DO NOT downgrade either. The working configuration is "parcel-bundler": "1.12.5" and "parcel-plugin-static-files-copy": "2.6.0".

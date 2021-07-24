@@ -7,6 +7,13 @@ export class App {
     this.wallet = wallet;
   }
 
+  async collect (objktId, contractAddress) {
+    console.log(objktId);
+    // default contract is Hic et nunc Markeplace (OBJKT Swap v2)
+    const contract = await this.tk.wallet.at(contractAddress || 'KT1HbQepzV1nVGg8QVznG7z4RcHseD5kwqBn');
+    console.log(contract);
+  }
+
   async connectWallet (network) {
     await wallet.requestPermissions({
       network: {
