@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {});
 // AFRAME components should be registered before the <a-scene> tag
 // These components need access to the global Taquito app instance.
 
+// Component to show the artwork on H=N in a popup iframe window
 AFRAME.registerComponent('henlink', {
   schema: { url: { type: 'string' }, loc: { type: 'string', default: 'tab' } },
   init: function () {
@@ -31,6 +32,7 @@ AFRAME.registerComponent('henlink', {
   }
 });
 
+// Component to connect / disconnect a wallet via Beacon
 AFRAME.registerComponent('wallet', {
   schema: {},
   init: function () {
@@ -62,6 +64,7 @@ AFRAME.registerComponent('wallet', {
   }
 });
 
+// Component to retrieve the balance of the active wallet address
 AFRAME.registerComponent('balance', {
   schema: {},
   init: function () {
